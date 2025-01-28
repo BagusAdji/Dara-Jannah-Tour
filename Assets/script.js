@@ -59,17 +59,22 @@ document.querySelectorAll('.slider-container').forEach((slider) => {
     });
 });
 
-const toggleBtn = document.querySelector('.toggle_btn')
-       const toggleBtnIcon = document.querySelector('.toggle_btn i')
-       const dropDownMenu = document.querySelector('.dropdown_menu')
-       const Container = document.querySelector('.container')
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector('.toggle_btn');
+    const toggleBtnIcon = document.querySelector('.toggle_btn i');
+    const dropDownMenu = document.querySelector('.dropdown_menu');
+    const Container = document.querySelector('.container');
+    const Banner = document.querySelector('.banner');
 
-       toggleBtn.onclick = function (){
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
-        Container.classList.toggle('open')
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+        
+        if (Container) Container.classList.toggle('open');
+        if (Banner) Banner.classList.toggle('open');
 
-        toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars'
-       }
+        toggleBtnIcon.className = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars';
+    };
+});
