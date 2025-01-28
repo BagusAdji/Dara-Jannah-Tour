@@ -1,50 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #fff;
-}
-
-header {
-    background: #202020;
-    padding: 10px 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img {
-    height: 70px;
-    margin-left: 20px;
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-}
-
-header nav ul li {
-    margin: 0px 15px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px;
-}
-
-header nav ul li a:hover {
-    color: #202020;
-    background: #d4af37;
-    border-radius: 5px;
-}
 
 .jadwal {
     padding: 20px 10px;
@@ -81,7 +35,7 @@ header nav ul li a:hover {
     gap: 10px;
 }
 
-.container {
+.container-detail {
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -320,4 +274,337 @@ form input[type="email"]::placeholder {
     background: 212121;
     padding: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 500px) {
+    
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #fff;
+    }
+    
+    header {
+        background: #202020;
+        padding: 10px 20px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header img {
+        height: 30px;
+        margin-left: 10px;
+    }
+    
+    header nav ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    header nav ul li {
+        margin: 0px 2px;
+    }
+    
+    header nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        padding: 5px;
+        font-size: 0.6rem;
+    }
+    
+    header nav ul li a:hover {
+        color: #202020;
+        background: #d4af37;
+        border-radius: 5px;
+    }
+    
+    .jadwal {
+        padding: 10px 5px;
+        background: #d4af37;
+        display: flex;
+        border-radius: 8px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .jadwal-item {
+        margin: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .jadwal-item img {
+        max-width: 25px;
+        height: auto;
+    }
+    
+    .jadwal-item span {
+        margin-left: 5px;
+        font-weight: bold;
+        font-size: 0.7em;
+    }
+    
+    
+    .machine-time {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+        gap: 10px;
+
+    }
+    .machine-time img {
+        max-width: 25px;
+        height: auto;
+    }
+    .machine-time span {
+        margin-left: 5px;
+        font-weight: bold;
+        font-size: 0.7em;
+    }
+    
+    
+    .container {
+        padding: 30px 0px;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        flex-direction: row;
+        background: linear-gradient(to bottom, #d4af37,#212121);
+    }
+    
+    .image-section {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    .carousel {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .carousel img {
+        margin-left: 50px;
+        width: 60%;
+        display: none;
+        margin-top: 15px;
+    }
+    
+    .carousel img.active {
+        display: block;
+    }
+    .carausel-footer{
+        margin-left: 35px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: row;
+    }
+    .carausel-footer img{
+        border-radius: 5px;
+        margin-top: 30px;
+        margin-right: 10px;
+        width: 40px;
+        height: 65px;
+    }
+    .carousel-buttons {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .carousel-buttons button {
+        background-color: #D4AF37;
+        border-radius: 15px;
+        border: none;
+        padding: 4px 10px;
+        cursor: pointer;
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+    
+    
+    .text-section {
+        font-family: mulish;
+        font-size: 1rem;
+        margin-left: auto;
+        height: 40%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .title {
+        font-family: space grotesk;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .price {
+        font-family: mulish;
+        font-size: 1.3rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .description {
+        font-family: mulish;
+        font-size: 0.7rem;
+        margin-bottom: 20px;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    
+    .benefits {
+        font-family: mulish;
+        font-size: 1.5rem;
+        font-weight: bold;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .benefitss {
+        font-family: mulish;
+        font-size: 0.7rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .benefits li {
+        margin-bottom: 10px;
+    }
+    form{
+        font-family: mulish;
+        width: 100%;
+    }
+    form input[type="email"] {
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid black;
+        background-color: white;
+        color: gray;
+        font-size: 1rem;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+    
+    form input[type="email"]::placeholder {
+        color: gray;
+    }
+    
+    .btn-primary {
+        font-family: mulish;
+        margin-top: 10px;
+        padding: 15px;
+        width: 100%;
+        border-radius: 10px;
+        font-size: 1rem;
+        color: white;
+        background-color: #D4AF37;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .btn-primary:hover {
+        background-color: #D4AF37;
+    }
+    .footer {
+        background: linear-gradient(to bottom, #202020,#d4af37);
+        color: white;
+        padding: 30px 20px 60px;
+        font-family: Arial, sans-serif;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1100px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+    
+    
+    .footer-left {
+        flex: 1;
+    }
+    
+    .footer-logo {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-left p {
+        margin: 5px 0;
+        line-height: 1.5;
+    }
+    
+    .subscribe-box {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .subscribe-box input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        flex: 1;
+    }
+    
+    .subscribe-box button {
+        padding: 10px 15px;
+        border: none;
+        background: #d4af37;
+        color: black;
+        font-size: 16px;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+    
+    
+    .footer-right {
+        flex: 1;
+        text-align: right;
+    }
+    
+    .footer-right h4 {
+        font-family: Mulish;
+        font-size: 24px;
+        text-align: center  ;
+        margin-bottom: 10px;
+    }
+    
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .social-icons a img {
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background: 212121;
+        padding: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
 }
