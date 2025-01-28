@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* ========================= */
+/*        CSS GLOBAL        */
+/* ========================= */
 body {
     margin: 0;
     padding: 0;
@@ -53,8 +55,6 @@ header nav ul li a:hover {
     color: #202020;
     background: #d4af37;
 }
-
-/* Media queries untuk responsivitas */
 @media (max-width: 768px) {
     header img {
         height: 40px; /* Ukuran gambar lebih kecil untuk perangkat kecil */
@@ -109,7 +109,60 @@ header nav ul li a:hover {
         font-size: 0.6rem;
     }
 }
-/* Style default */
+.container {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slide 12s infinite;
+}
+
+.wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(0);
+    }
+    38% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-100%);
+    }
+    71% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+}
+/* ========================= */
+/*    CSS HALAMAN BERANDA    */
+/* ========================= */
 .hero {
     background: #202020;
     display: flex;
@@ -183,21 +236,22 @@ header nav ul li a:hover {
 /* Media query untuk tablet */
 @media (max-width: 768px) {
     .hero {
-        padding: 150px 30px;
+        padding: 150px 0px;
         gap: 40px;
     }
 
     .hero-content {
-        max-width: 50%;
+        padding:  10px 30px;
+        max-width: 100%;
         text-align: left;
     }
 
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .hero-content p {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     .hero-content a {
@@ -604,58 +658,9 @@ header nav ul li a:hover {
     }
 }
 
-.container {
-    width: 100%;
-    height: 80vh;
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.wrapper {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    animation: slide 12s infinite;
-}
-
-.wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    33% {
-        transform: translateX(0);
-    }
-    38% {
-        transform: translateX(-100%);
-    }
-    66% {
-        transform: translateX(-100%);
-    }
-    71% {
-        transform: translateX(-200%);
-    }
-    100% {
-        transform: translateX(-200%);
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        height: auto;
-    }
-}
-
+/* ========================= */
+/*    CSS HALAMAN ABOUT    */
+/* ========================= */
 .banner {
     width: 100%;
     height: 300px;
@@ -1079,7 +1084,6 @@ header nav ul li a:hover {
     flex-wrap: wrap; /* Elemen input dan button turun jika ruang sempit */
     align-items: center;
     justify-content: center; /* Tengahkan elemen di layar kecil */
-    margin-top: 15px;
 }
 
 .subscribe-box input {
@@ -1092,7 +1096,7 @@ header nav ul li a:hover {
 }
 
 .subscribe-box button {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     padding: 10px 15px;
     border: none;
     background: #d4af37;
@@ -1149,13 +1153,13 @@ header nav ul li a:hover {
     }
 
     .subscribe-box input {
-        margin-top: 10px;
         max-width: 70%;
         margin-bottom: 0;
     }
 
     .subscribe-box button {
         max-width: none; /* Hapus batas lebar */
+        margin-bottom: 0px;
     }
 }
 
@@ -1168,4 +1172,7 @@ header nav ul li a:hover {
     .footer-right {
         max-width: 400px;
     }
+}
+
+@media (max-width: 768px){
 }
