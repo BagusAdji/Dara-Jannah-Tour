@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail_Haji</title>
+    <link rel="stylesheet" href="Assets/detail.css">
+</head>
+
+<body>
+    <header>
+        <img src="Image/LOGO_DARA_JANNAH_TOUR_NO_BG_1.png" alt="Dara Jannah Tour Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="umroh.html">Paket Umroh</a></li>
+                <li><a href="pakethaji.html">Paket Haji</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Hubungi Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="image-section">
+            <div class="carousel">
+                <img src="Image/FLAYER UMROH2 1.png" alt="Image 1" class="active">
+                <img src="Image/FLAYER UMROH 3.png" alt="Image 2">
+                <img src="Image/FLAYER UMROH 3.png" alt="Image 3">
+            </div>
+            <div class="carausel-footer">
+                <img src="Image/FLAYER UMROH 3.png">
+                <img src="Image/FLAYER UMROH 3.png">
+                <img src="Image/FLAYER UMROH 3.png">
+                <img src="Image/FLAYER UMROH 3.png">
+            </div>
+            <div class="carousel-buttons">
+                <button onclick="prevImage()">&#8592; Prev</button>
+                <button onclick="nextImage()">Next &#8594;</button>
+            </div>
+        </div>
+        <div class="text-section">
+            <div class="title">Berangkat Haji 2025</div>
+            <div class="price">$99.99</div>
+            <div class="jadwal">
+                <div class="jadwal-item">
+                    <img src="Image/Airplane Take Off.png" alt="Airplane Take Off">
+                    <span>Jawa</span>
+                    <img src="Image/Airplane Landing.png" alt="Airplane Landing">
+                    <span>Mekkah</span>
+                </div>
+                <div class="machine-time">
+                    <img src="Image/Time Machine.png" alt="Time Machine">
+                    <span>2 Hari 12 Jam</span>
+                </div>
+            </div>
+            <div class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+                Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+                <ul class="benefits">
+                    <li>Benefit</li>
+                </ul>
+                <ul class="benefitss">
+                    <li>- Makanan Halal</li>
+                    <li>- Transportasi Nyaman</li>
+                    <li>- Hotel Dekat Masjid</li>
+                    <li>- Pemandu Profesional</li>
+                </ul>
+                <form>
+                    <input type="email" id="email" name="email" placeholder="Masukan Email">
+                </form>
+                <button class="btn-primary">Pesan Sekarang</button>
+            </div>
+        </div>
+    </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="Image/LOGO DARA JANNAH TOUR NO BG 1.png" alt="Logo" class="footer-logo">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h4>Subscribe Us</h4>
+                    <div class="subscribe-box">
+                        <input type="email" placeholder="Your Email address">
+                        <button>➔</button>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h4>Social Media</h4>
+                    <div class="social-icons">
+                        <a href="#"><img src="Image/WhatsApp.png" alt="WhatsApp"></a>
+                        <a href="#"><img src="Image/Instagram.png" alt="Instagram"></a>
+                        <a href="#"><img src="Image/Facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="Image/YouTube.png " alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            let currentImageIndex = 0;
+            const images = document.querySelectorAll('.carousel img');
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle('active', i === index);
+                });
+            }
+
+            function nextImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                showImage(currentImageIndex);
+            }
+
+            function prevImage() {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                showImage(currentImageIndex);
+            }
+        </script>
+
+</body>
+
+</html>
