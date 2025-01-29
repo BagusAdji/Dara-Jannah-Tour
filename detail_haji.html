@@ -7,30 +7,38 @@
     <title>Detail_Haji</title>
     <link rel="stylesheet" href="Assets/detail.css">
     <link rel="stylesheet" href="Assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <a href="" class="btn-whatsapp">
+    <a href="whatsapp.com" class="btn-whatsapp">
         <div class="btn-whatsapp1">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span class="tooltip">WhatsApp</span>
-        </div>
-    </a>
-    <header>
-        <img src="Image/LOGO_DARA_JANNAH_TOUR_NO_BG_1.png" alt="Dara Jannah Tour Logo">
-        <nav>
-            <ul>
+            <i class="fa-brands fa-whatsapp">
+            </i><span class="tooltip">WhatsApp</span>
+        </div></a>
+        <header>
+            <a href="Index.html"><img src="Image/LOGO DARA JANNAH TOUR NO BG 1.png" alt="Dara Jannah Tour Logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="umroh.html">Paket Umroh</a></li>
+                    <li><a href="pakethaji.html">Paket Haji</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa solid fa-bars"></i>
+                </div>
+            </nav>
+            <div class="dropdown_menu">
                 <li><a href="index.html">Beranda</a></li>
-                <li><a href="umroh.html">Paket Umroh</a></li>
-                <li><a href="pakethaji.html">Paket Haji</a></li>
-                <li><a href="about.html">Tentang Kami</a></li>
-                <li><a href="contact.html">Hubungi Kami</a></li>
-            </ul>
-        </nav>
-    </header>
+                    <li><a href="umroh.html">Paket Umroh</a></li>
+                    <li><a href="pakethaji.html">Paket Haji</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+            </div>
+        </header>
     <div class="container-detail">
         <div class="image-section">
             <div class="carousel">
@@ -53,11 +61,15 @@
             <div class="title">Berangkat Haji 2025</div>
             <div class="price">$99.99</div>
             <div class="jadwal">
-                <div class="jadwal-item">
-                    <img src="Image/Airplane Take Off.png" alt="Airplane Take Off">
-                    <span>Jawa</span>
-                    <img src="Image/Airplane Landing.png" alt="Airplane Landing">
-                    <span>Mekkah</span>
+                <div class="jadwals">
+                    <div class="jadwal-item">
+                        <img src="Image/Airplane Take Off.png" alt="Airplane Take Off">
+                        <span>Jawa</span>
+                    </div>
+                    <div class="jadwal-item"> 
+                        <img src="Image/Airplane Landing.png" alt="Airplane Landing">
+                        <span>Mekkah</span>
+                    </div>
                 </div>
                 <div class="machine-time">
                     <img src="Image/Time Machine.png" alt="Time Machine">
@@ -110,26 +122,7 @@
                 </div>
             </div>
         </footer>
-        <script>
-            let currentImageIndex = 0;
-            const images = document.querySelectorAll('.carousel img');
-
-            function showImage(index) {
-                images.forEach((img, i) => {
-                    img.classList.toggle('active', i === index);
-                });
-            }
-
-            function nextImage() {
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                showImage(currentImageIndex);
-            }
-
-            function prevImage() {
-                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-                showImage(currentImageIndex);
-            }
-        </script>
+        <script src="Assets/script.js"></script>
 
 </body>
 

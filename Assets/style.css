@@ -103,7 +103,7 @@ nav .toggle_btn{
         display: block;
     }
     .dropdown_menu{
-        width: 40%;
+        width: unset;
     }   
 }
 @media(max-width:480px) {
